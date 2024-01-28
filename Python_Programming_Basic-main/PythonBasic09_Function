@@ -1,0 +1,95 @@
+[함수]
+= 특정 기능을 수행하는 코드들의 모임.
+
+[내장 함수]
+= 파이썬 개발자들이 이미 만들어 둔 함수들.
+print() : 자료를 출력하는 함수.
+
+input() : 자료를 입력하는 함수.
+
+sum() : 숫자 원소로 이루어진 시퀀스 자료의 합
+print(sum(1,2 ,3,4,5)) #15
+
+len() : 시퀀스 자료의 길이를 구하는 함수
+print(len("Traiangle")) #8
+
+max() : 시퀀스 자료의 최댓값을 구하는 함수.
+print(max(1,2,3,4,5)) #5
+
+min() : 시퀀스 자료의 최솟값을 구하는 함수.
+print(min(1,2,3,4,5)) #1
+
+int()
+
+[사용자 지정 함수]
+= 사용자가 여러 코드를 묶어서 새로 만든 함수
+
+def plusDouble(a, b):          1."def"ine(정의하다) 키워드를 이용해서 함수 정의.
+  c = a+b                      2. 같은 들여쓰기를 통해 명령 작성.
+  return 2*c                   3. 매개변수를 이용해서 함수 내부로 값을 전달.
+print(plus(3, 4)) #14          4. return을 이용해서 함수 외부로 값을 전달.
+                                 반환해야하는 이유 : 함수 내부에서 일어난 일은 함수 외부에서 알 수 없기에 빈환을 통해서 외부로 전달.
+def 함수이름(매개변수):        
+  <수행할 명령>
+  . . .
+  return  반환값
+
+
+ex) 합/길이 쉽게 구하기
+    원소들의 합 : sum()
+    시퀀스의 길이 : len()
+    단, sum()을 사용할 때는 시퀀스 안의 원소가 모두 숫자형 자료여야합니다!
+
+    my_tuple = (3, 1, 2, 4)
+
+    print(sum(my_tuple))
+    print(len(my_tuple))
+
+    1. 원하는 숫자 5개가 담긴 리스트 my_list을 하나 선언해봅시다.
+    
+    2. 변수 var1를 선언하고, my_list의 합을 넣어봅시다.
+    
+    3. 변수 var2를 선언하고, my_list의 길이를 넣어봅시다.
+    
+    4. 변수 var3을 선언하고, my_list의 평균을 넣어봅시다.
+
+    my_list = (3, 5, 6, 7, 8)
+    
+    var1 = sum(my_list)
+    
+    var2 = len(my_list)
+    
+    var3 =  var1/var2
+    
+    print(var1, var2, var3)
+
+ex) 명령이 끝난 후엔 반환! return
+  def plus(a, b):
+      return a+b #a+b를 반환!
+          
+  var1 = plus(3, 4) #반환값 7을 var1에 대입
+ 
+  1. 함수 plus_print()을 만들어봅시다.
+  
+    매개변수 : a, b
+    함수 안에서 a와 b를 더한 값을 출력
+    반환값 없음.
+ 
+  2. 함수 times_return()을 만들어봅시다.
+  
+    매개변수 : a, b
+    반환값 a와 b를 곱한 결과.
+    
+  3. 함수를 작성한 후, 다음과 같이 출력되도록 코드를 작성해봅시다.
+  
+    plus_print()으로 숫자 3과 4의 합을 출력해봅시다.
+    print()와 times_return()으로 숫자 3과 4의 곱을 출력해봅시다.
+
+def plus_print(a, b):
+    print(a+b)
+
+def times_return(a,b):
+    return a*b
+
+plus_print(3,4)
+print(times_return(3,4))

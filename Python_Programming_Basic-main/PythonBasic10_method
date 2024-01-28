@@ -1,0 +1,63 @@
+[메서드]
+= 특정 자료에 대해 특정 기능을 하는 코드
+
+my_list = [1, 2, 3, 4]
+my_list.append()
+my_list.count()
+my_list.pop()
+
+함수 VS 메서드
+= 함수는 특정 가능을 수행(매개변수를 이용해 자료를 전달한다.)
+= 메서드는 특정 자료와 연관 지어 기능을 한다(자료 뒤에 . 를 찍어 사용한다.)
+
+ex) 친구가 있는 함수? 메서드!
+    함수 중에서 특정 자료와 함께 사용되는 함수가 있습니다. 우리는 그것을 메서드라고 부릅니다.
+    
+    메서드 : 자료.메서드이름()
+    my_list = [5, 4, 3, 2, 1]
+    
+    my_list.append(5) #원소를 추가하는 메서드
+    my_list.sort() #정렬하는 메서드
+    
+    대응 관계가 3개 있는 Dictionary를 만들고, 이를 변수 my_dict에 넣어봅시다.
+    
+    다음 두 메서드를 이용해서, Dictionary의 Key값들을 담은 변수 var1과 Value값들을 담은 변수 var2를 만들어봅시다.
+    
+    딕셔너리.keys() : Dictionary형 dict의 모든 Key를 반환
+    딕셔너리.values() : Dictionary형 dict의 모든 Value를 반환
+
+    my_dict = {33 : "apple", 44 : "banana", 55 : "Mango"}
+    
+    var1 = my_dict.keys()
+    var2 = my_dict.values()
+    
+    print(var1, var2)
+
+ex) 인자와 매개변수, 닮은 듯 다르다!
+
+    매개변수(parameter) : 함수를 정의할 때(만들 때) 넘겨받은 값을 관리하는 변수
+    인자(argument) : 함수를 호출할 때(사용할 때) 함수로 넘겨주는 자료
+
+    def plusDouble(a, b): #이때 a, b는 매개변수!
+        return 2*(a+b)
+    
+    print(plusDouble(3, 4)) #이때 3, 4는 인자!
+    # 함수 호출시
+    # a = 3
+    # b = 4
+    # 로 간주
+
+    함수 solve()를 만들어봅시다. 이 함수의 매개변수는 a와 b입니다.
+    
+    이 함수는 a와 b를 곱한 것을 반환합니다.
+    
+    이 함수에 숫자 3과 4를 인자로 넣어서 반환되는 값을 변수 var1에 넣어봅시다.
+    
+    이 함수에 숫자 3과 리스트 ['Cham']을 인자로 넣어서 반환되는 값을 변수 var2에 넣어봅시다.
+
+def solve(a,b):
+    return a*b
+var1 = solve(3,4) 
+var2 = solve(3, ["Cham"])
+
+print(var1, var2)

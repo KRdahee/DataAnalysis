@@ -1,0 +1,85 @@
+[Dictionary]
+사전, 짝꿍이 있는 자료형
+
+{} - 중괄호로 묶어서 표현한다.
+dict_zero = {}
+person = {'name' : 'Chris', 'age' : 28} 한 쌍의 자료형을 추가.
+짝꿍이 있는 자료형 {key : value}의 형식 : key를 알면 value를 알 수 있다.
+
+key --> name, age  
+value --> Chris, 28
+dict_zero = {}
+person = {'name' : 'Chris', 'age' : 28}
+print(person['name']) #BABO
+print(person['age'])  #28
+
+자료 추가하기
+person = {'name' : 'Chris', 'age' : 28}
+person['hometown'] = Seoul
+
+del 함수로 삭제도 가능함!
+person = {'name' : 'Chris', 'age' : 28}
+del person['age']
+print(person) #{'name' : 'Chris'}
+
+중요!! key는 변할 수 없는 자료형이여야한다. 리스트는 안됌. 튜플은 가능하다.
+datas = {[1,2,3]:'Alphabet'} #Error 리스트는 불가능 --> 변할 수 있기에
+datas = {(1,2,3):'Number'} #OkiDoki 튜플은 가능
+
+ex) 넌 나랑 한패! Dictionary
+    자료형 중에는 관계를 만들 수 있는 자료형이 있습니다. 이를 Dictionary(딕셔너리 : 사전형) 자료라고 합니다.
+   
+    “사과” → “apple”
+    “바나나” → “banana”
+    “당근” → “carrot”
+    my_dict에서 “사과”를 Key로 넣어 나온 Value를 변수 var1에 넣어봅시다.
+    
+    당근은 싫어요! my_dict에서 당근-carrot을 제거해봅시다.
+    체리는 좋아요! my_dict에서 체리-cherry를 추가해봅시다.
+    
+    Tips!
+    Dictionary의 Key나 Value를 문자열로 설정할 땐 “”, ”(따옴표)를 잊지 마세요!
+    Dictionary를 어디에 활용할 수 있을까요? 한번 생각해봅시다!
+    Dictionary의 원소를 제거할 때는del Keyword를 사용합니다.
+
+my_dict = {"사과":"apple", "바나나":"banana","당근":"carrot"}                
+var1 = "apple"
+my_dict["체리"] = "cherry"
+del my_dict ["당근"]
+print(my_dict)
+
+my_dict = {"사과": "apple", "바나나": "banana", "당근": "carrot"}
+var1 = my_dict["사과"]
+del my_dict["당근"]
+my_dict["체리"] = "cherry"
+print(my_dict)
+
+ex) Dictionary에서 Key는 Value를 가져오기 위한 중요한 요소입니다. 
+    그렇기 때문에 Key는 변할 수 없는 자료형이여야 합니다. 또한, 2개 이상의 동일한 Key가 있어선 안 됩니다.
+
+    my_dict = {1:"One", 1:"Yi"} #Bad
+    my_dict = {[1, 2, 3]:"Numbers"} #Error...
+    my_dict = {(1, 2, 3):"Numbers"} #OK!
+    따라서 여러 자료의 묶음을 Key로 설정하고 싶다면, List가 아닌 Tuple을 사용하세요!
+
+    1. 빈 Dictionary를 만들고, 이를 변수 my_dict에 넣어봅시다.
+    
+    2. my_dict에 다음 대응관계를 넣어봅시다.
+    1 → “Integer”
+    ‘a’ → “String”
+    (1, 2, 3) → “Tuple”
+    
+    3. my_dict에 다음 대응관계를 추가하는 코드를 10번째 줄에 작성해봅시다.
+    [1, 2, 3] → “List”
+
+    my_dict = {}
+    
+    my_dict = {1 : "Integer", 'a': "String", (1,2,3) : "Tuple"}
+    
+    try:
+        #여기에 [1, 2, 3] → "List"의 대응관계를 만들어봅시다.
+        my_dict = {[1,2,3] : "list"}
+    
+    
+    except TypeError:
+        print("List는 Dictionary의 Key가 될 수 없습니다.")
